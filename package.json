@@ -1,7 +1,7 @@
 {
   "name": "parcel-react",
-  "version": "1.0.0",
-  "description": "Light react boilerplate with Parcel",
+  "version": "1.1.0",
+  "description": "Light react boilerplate with Parcel and Testing",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
@@ -24,12 +24,14 @@
   "author": "SG",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.7.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-jest": "^24.9.0",

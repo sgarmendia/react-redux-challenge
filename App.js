@@ -1,14 +1,10 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 import './scss/main.scss'
 
-class Main extends Component {
-  render() {
-    return (
-      <Fragment>
-        <h1>Parcel React boilerplate</h1>
-      </Fragment>
-    )
-  }
-}
+const App = () => (
+  <>
+    <h1>Parcel React boilerplate</h1>
+  </>
+);
 
-export default Main
+export default App;
