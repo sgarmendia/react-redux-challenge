@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir build"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir build"
   },
   "jest": {
-    "setupFilesAfterEnv": [
-      "./setupTests.js"
-    ],
+    "setupFilesAfterEnv": [ "<rootDir>/jest-setup.js" ],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"
     }
@@ -34,10 +32,10 @@
     "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
     "babel-jest": "^26.6.3",
     "cssnano": "^4.1.10",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
     "jest": "^26.6.3",
     "sass": "^1.23.7"
   }

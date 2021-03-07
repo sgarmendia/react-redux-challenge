@@ -3,7 +3,7 @@ import './scss/main.scss'
 
 const App = () => (
   <>
-    <h1>Parcel React boilerplate</h1>
+    <h1 data-testid='title'>Parcel React boilerplate</h1>
   </>
 );
 
