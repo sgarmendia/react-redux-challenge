@@ -1,7 +1,9 @@
 import { createStore } from "redux";
 import { rootReducer } from "./rootReducer";
 
-const initialState = {};
+const initialState = localStorage.getItem('store')
+    ?   JSON.parse(localStorage.getItem('store'))
+    :   {};
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ?   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
@@ -10,7 +12,9 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 const store = createStore(rootReducer, initialState, devTools);
 
 store.subscribe(() => {
-    // console.log(store.getState())
+    const { todos=[] } = store.getState();
+    const stringifiedStore = JSON.stringify({ filter: 'ALL', todos })
+    localStorage.setItem('store', stringifiedStore);
 });
 
 export default store;
