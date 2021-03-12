@@ -27,15 +27,28 @@ const Filter = () => {
 	};
 
 	return (
-		<div>
-			<button type="button" onClick={() => handleFilter('all')}>
-			Show All
+		<div className="filter_container">
+			<h1>Redux TODOS</h1>
+			<button 
+				className="btn " 
+				type="button" 
+				onClick={() => handleFilter('all')}
+			>
+				Show All
 			</button>
-			<button type="button" onClick={() => handleFilter('complete')}>
-			Show Complete
+			<button 
+				className="btn " 
+				type="button" 
+				onClick={() => handleFilter('complete')}
+			>
+				Show Complete
 			</button>
-			<button type="button" onClick={() => handleFilter('incomplete')}>
-			Show Incomplete
+			<button 
+				className="btn " 
+				type="button" 
+				onClick={() => handleFilter('incomplete')}
+			>
+				Show Incomplete
 			</button>
 		</div>
 	);

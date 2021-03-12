@@ -2,20 +2,89 @@
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat;
-  box-sizing: border-box;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
 //--------------------------------------//
 
-html {
-  background-color: dimgray;
-  h1 {
-    font-family: monospace;
-    padding-left: 1em;
-    color: white;
-  }
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Patrick+Hand&display=swap');
+
+body {
+	margin: 0;
+	background-color: dimgray;
+	height: 100vh;
+}
+
+.main_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.task {
+		height: 2rem;
+		display: flex;
+		align-items: center;
+		.done_task {
+			cursor: pointer;
+			width: 15px;
+			height: 15px;
+			margin-right: 8px;
+			margin-left: 8px;
+		}
+		& label {
+			font-family: 'PT Sans Caption', sans-serif;
+		}
+	}
+}
+
+
+// icons
+.fas, .far {
+	cursor:pointer;
+	&.fa-check {
+		color: green;
+	}
+	&.fa-edit {
+		color: lightseagreen;
+		margin-right: 8px;
+		margin-left: 0px;
+	}
+	&.fa-trash-alt {
+		color: red;
+		margin: 0 8px;
+	}
+}
+
+// buttons
+.btn {
+	margin: 0.5rem;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:2px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+	&:hover {
+		background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+		background-color:#ffab23;
+	}
+	&:active {
+		position:relative;
+		top:1px;
+	}
+}
+
+// fonts
+h1, h2, h3, p {
+	color:#f5f1e7;
+	font-family: 'PT Sans Caption', sans-serif;
+	padding-left: 0.5rem;
 }

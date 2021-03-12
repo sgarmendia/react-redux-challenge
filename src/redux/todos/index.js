@@ -6,6 +6,7 @@ export const UNDO_TODO = 'UNDO_TODO';
 export const ADD_TODO = 'ADD_TODO';
 export const EDIT_TODO = 'EDIT_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
 
 //Initial state
 const initialState = [
@@ -42,9 +43,14 @@ export const todosReducer = (state = initialState, action) => {
 				? { ...todo, complete: false }
 				: todo
 			);
+        case TOGGLE_TODO:
+            return state.map(todo => todo.id === action.id
+                ? { ...todo, edit: !todo.edit }
+                : todo
+            );
         case EDIT_TODO:
 			return state.map(todo => todo.id === action.id
-				? { ...todo, task: action.task }
+				? { ...todo, task: action.task, edit: false }
 				: todo
 			);
         case DELETE_TODO:

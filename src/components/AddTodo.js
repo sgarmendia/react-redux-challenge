@@ -21,9 +21,9 @@ const AddTodo = () => {
     const handleChange = event => setTask(event.target.value);
    
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="new_task" onSubmit={handleSubmit}>
             <input type="text" value={task} onChange={handleChange} />
-            <button type="submit">Add Todo</button>
+            <button className="btn" type="submit">Add Todo</button>
         </form>
     );
 };
