@@ -1,13 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux';
+//custom Provider
+import Provider from '/react-redux/Provider';
 //Redux Store
 import store from '/redux/store';
-//App components
+//components
 import App from './App'
+import ErrorBoundary from '/components/ErrorBoundary'
 
 ReactDOM.render(
-	<Provider store={store}>
-        <App />
-    </Provider>, 
+    <ErrorBoundary>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </ErrorBoundary>,
 document.getElementById('root'))

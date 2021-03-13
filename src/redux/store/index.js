@@ -11,10 +11,4 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 
 const store = createStore(rootReducer, initialState, devTools);
 
-store.subscribe(() => {
-    const { todos=[] } = store.getState();
-    const stringifiedStore = JSON.stringify({ filter: 'ALL', todos })
-    localStorage.setItem('store', stringifiedStore);
-});
-
 export default store;

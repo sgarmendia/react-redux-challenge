@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from '/react-redux/hooks'
 import { 
     DO_TODO, 
     UNDO_TODO, 
@@ -10,8 +10,8 @@ import {
 import PropTypes from 'prop-types'
 
 const TodoList = () => {
-    const dispatch = useDispatch();
-    const { todos, filter } = useSelector(state => state);
+    const dispatch = useDispatch()
+    const { todos=[], filter='ALL' } = useSelector(state => state);
     const [ task , setTask ] = useState('');
 
     const filteredTodos = todos.filter(todo => {
