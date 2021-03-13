@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types'
 
 const AddTodo = () => {
     const dispatch = useDispatch();
@@ -15,7 +14,6 @@ const AddTodo = () => {
         }
     
         setTask('');
-    
     };
    
     const handleChange = event => setTask(event.target.value);
@@ -28,8 +26,4 @@ const AddTodo = () => {
     );
 };
 
-AddTodo.propTypes = {
-
-}
-
-export default AddTodo
+export default AddTodo;
