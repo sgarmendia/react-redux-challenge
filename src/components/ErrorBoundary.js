@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const containerStyle = {
 	display: 'flex',
 	flexDirection: 'column',
-	justifyContent: 'center',
 	alignItems: 'center',
 };
 
@@ -37,4 +36,4 @@ export default class ErrorBoundary extends React.Component {
 
 	return this.props.children; 
 	}
-}
+};

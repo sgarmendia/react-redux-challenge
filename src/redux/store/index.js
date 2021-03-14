@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import createStore from "/redux/methods/createStore";
 import { rootReducer } from "./rootReducer";
 
 const initialState = localStorage.getItem('store')

@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 //custom Provider
 import Provider from '/react-redux/Provider';
 //Redux Store
 import store from '/redux/store';
 //components
-import App from './App'
-import ErrorBoundary from '/components/ErrorBoundary'
+import App from './App';
+import ErrorBoundary from '/components/ErrorBoundary';
 
 ReactDOM.render(
     <ErrorBoundary>
@@ -14,4 +14,4 @@ ReactDOM.render(
             <App />
         </Provider>
     </ErrorBoundary>,
-document.getElementById('root'))
+document.getElementById('root'));

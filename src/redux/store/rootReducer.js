@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import combineReducers from "/redux/methods/combineReducers";
 import { filterReducer } from "/redux/filter";
 import { todosReducer } from "/redux/todos";
 

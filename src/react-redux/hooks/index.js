@@ -3,7 +3,6 @@ import store from '/redux/store'
 import AppContext from '/react-redux/context'
 
 export const useDispatch = () => {
-    
     return store.dispatch
 }
 

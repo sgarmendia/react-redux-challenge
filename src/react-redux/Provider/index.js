@@ -16,7 +16,6 @@ const Provider = ({ children, store={} }) => {
             unsubscribe()
         }
     }, [])
-
     return (
         <AppContext.Provider value={AppState}>
             {children}

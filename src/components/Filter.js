@@ -1,14 +1,13 @@
-import React from 'react'
-import { useDispatch } from '/react-redux/hooks'
+import React from 'react';
+import { useDispatch } from '/react-redux/hooks';
 import {
 	SHOW_ALL,
 	SHOW_COMPLETE,
 	SHOW_INCOMPLETE,
 } from '/redux/filter';
-import PropTypes from 'prop-types'
 
 const Filter = () => {
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	const handleFilter = show => {
 		switch (show) {
@@ -54,8 +53,4 @@ const Filter = () => {
 	);
 };
 
-Filter.propTypes = {
-
-}
-
-export default Filter
+export default Filter;

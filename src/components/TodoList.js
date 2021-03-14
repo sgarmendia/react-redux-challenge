@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from '/react-redux/hooks'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from '/react-redux/hooks';
 import { 
     DO_TODO, 
     UNDO_TODO, 
     EDIT_TODO, 
     DELETE_TODO, 
     TOGGLE_TODO 
-} from '/redux/todos'
-import PropTypes from 'prop-types'
+} from '/redux/todos';
 
 const TodoList = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const { todos=[], filter='ALL' } = useSelector(state => state);
     const [ task , setTask ] = useState('');
 
@@ -46,21 +45,21 @@ const TodoList = () => {
         })
 
         setTask('');
-    }
+    };
 
     const handleEditTodo = todo => {
         dispatch({
             type: TOGGLE_TODO,
             id: todo.id,
         })
-    }
+    };
 
     const handleDelete = todo => {
         dispatch({
             type: DELETE_TODO,
             id: todo.id
         })
-    }
+    };
 
     return (
         <ul>
@@ -108,8 +107,4 @@ const TodoList = () => {
     )
 };
 
-TodoList.propTypes = {
-
-}
-
-export default TodoList
+export default TodoList;
