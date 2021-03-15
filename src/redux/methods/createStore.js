@@ -11,6 +11,9 @@ export default (rootReducer, initialState={}) => {
 
     const subscribe = newSubscription => {
       subscriptions = [ ...subscriptions, newSubscription ]
+      return () => {
+        subscriptions = subscriptions.filter(s => s !== newSubscription);
+      }
     };
 
     return {

@@ -56,7 +56,7 @@ export const todosReducer = (state = initialState, action) => {
         case DELETE_TODO:
           	return state.filter(todo => todo.id !== action.id);
         case ADD_TODO:
-          	return [ ...state, { task: action.task, id: action.id, complete: false } ];
+          	return [ ...state, { id: action.id, task: action.task, complete: false, edit: false } ];
         default:
           	return state;
       }
