@@ -20,8 +20,8 @@ const AddTodo = () => {
    
     return (
         <form className="new_task" onSubmit={handleSubmit}>
-            <input type="text" value={task} onChange={handleChange} />
-            <button className="btn" type="submit">Add Todo</button>
+            <input placeholder="Add todo" type="text" value={task} onChange={handleChange} />
+            <button data-testid="submit" className="btn" type="submit">Add Todo</button>
         </form>
     );
 };

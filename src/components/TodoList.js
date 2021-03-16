@@ -6,7 +6,7 @@ import {
     EDIT_TODO, 
     DELETE_TODO, 
     TOGGLE_TODO 
-} from '/redux/todos';
+} from '../redux/todos';
 
 const TodoList = () => {
     const dispatch = useDispatch();

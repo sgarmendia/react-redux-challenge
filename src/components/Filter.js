@@ -4,7 +4,7 @@ import {
 	SHOW_ALL,
 	SHOW_COMPLETE,
 	SHOW_INCOMPLETE,
-} from '/redux/filter';
+} from '../redux/filter';
 
 const Filter = () => {
 	const dispatch = useDispatch();
